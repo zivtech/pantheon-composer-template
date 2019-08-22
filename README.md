@@ -27,6 +27,12 @@ Below you can find the notable changes between our repository and the pantheon e
 
     git pull pantheon master --allow-unrelated-histories
 
-4. Git push to the pantheon remote master branch.
+4. Git force push to the github remote master branch.
 
-    git push pantheon master
+    git push --force
+
+5. Git force push to the pantheon remote master branch.
+
+    git push --force pantheon master
+
+6. Setup pantheon Dev site.
