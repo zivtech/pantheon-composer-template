@@ -1,5 +1,32 @@
-# Pantheon Empty Upstream
+# Pantheon Composer Template
 
-This is an empty repository that is, save for this explanatory text, devoid of all content. This upstream is appropriate to use in situations where a Pantheon site will be created through a build step (see the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin) and managed completely by Composer. Typically, the build step should completely replace the content provided by the upstream. If this README persists after the build step, it will do no harm; however, it would be advisable to replace this text with a description of the project.
+A repository template for new Drupal 8 Pantheon sites based on the https://github.com/pantheon-systems/example-drops-8-composer repository.
 
-If this upstream is used to install a site that does not have a build step, then you will not be able to install or use your site. In that event, the best thing to do would be to delete it and start over, either by selecting a different upstream, or by using the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin) `terminus build-env:create-project` command to set up a build server.
+## Notable Changes
+Below you can find the notable changes between our repository and the pantheon example-drops-8-composer repo.
+
+- The .gitignore file is modified to allow scaffolding, vendor, core, and all other composer managed files.
+- The .gitignore file is modified to ignore composer dev dependencies.
+- Removed Circle.CI, GitLab, and Bitbucket functionality, as we typically use GitHub with Jenkins.
+- Removed drupal console. We use drush.
+- Added some commonly used contrib modules.
+- Added Environment Indicator settings for local, DDEV, and Pantheon environments.
+
+## How to Use
+
+1. Create a new GitHub repo using this repository as a template.
+2. Create a new empty pantheon site using terminus.
+
+    terminus site:create SITENAME LABEL empty --org=zivtech --no-interaction
+
+3. Git add the Pantheon remote repo URL to the GitHub repo you cloned.
+
+    git remote add pantheon `PANTHEON_GIT_REPO`
+
+4. Git pull the Pantheon remote with --allow-unrelated-histories and fix any conflicts.
+
+    git pull pantheon master --allow-unrelated-histories
+
+4. Git push to the pantheon remote master branch.
+
+    git push pantheon master
