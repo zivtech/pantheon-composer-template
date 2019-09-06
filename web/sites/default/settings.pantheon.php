@@ -35,7 +35,6 @@ if (!defined("PANTHEON_VERSION")) {
  * 'pantheon-preproduction-services.yml' (for 'dev' or multidev environments).
  */
 $pantheon_services_file = __DIR__ . '/services.pantheon.preproduction.yml';
-
 if (
   isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   ( ($_ENV['PANTHEON_ENVIRONMENT'] == 'live') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'test') )
@@ -207,21 +206,3 @@ if (empty($settings['file_scan_ignore_directories'])) {
   ];
 }
 
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  // Environment indicator settings.
-  switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-    case 'dev':
-      $config['environment_indicator.indicator']['name'] = 'Dev';
-      $config['environment_indicator.indicator']['bg_color'] = '#fffb00';
-      $config['environment_indicator.indicator']['fg_color'] = '#000000';
-      break;
-    case 'test':
-      $config['environment_indicator.indicator']['name'] = 'Test';
-      $config['environment_indicator.indicator']['bg_color'] = '#CC7A00';
-      break;
-    case 'live':
-      $config['environment_indicator.indicator']['name'] = 'Live';
-      $config['environment_indicator.indicator']['bg_color'] = '#b30059';
-      break;
-  }
-}
