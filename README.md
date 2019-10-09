@@ -44,3 +44,4 @@ Below you can find the notable changes between our repository and the pantheon e
 
 10. Set the Pantheon site Development Mode to FTP to install the Drupal 8 site or import an existing database through the Pantheon Database/Files tab.
 11. Click the Visit Development Site button to either install the Drupal 8 site or verify the DB import was successful.
+12. Upload a tarball or zip archive of the files dir through the Pantheon UI or set the site to SFTP Development Mode and upload the contents of the files directory using the SFTP Connection Info available for the site.
