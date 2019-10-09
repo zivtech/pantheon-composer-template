@@ -18,28 +18,29 @@ Below you can find the notable changes between our repository and the pantheon e
 2. Ensure you have a [Pantheon Machine Token](https://dashboard.pantheon.io/users/#account/tokens/).
 3. Login to Pantheon using Terminus and your machine token in your Terminal.
 
-    terminus auth:login --machine-token YOUR_MACHINE_TOKEN
+       terminus auth:login --machine-token YOUR_MACHINE_TOKEN
 
 4. Create a new empty Pantheon site using Terminus. Replace `ORG_NAME` with your Pantheon organization name. Example: `zivtech`
 
-    terminus site:create SITENAME LABEL empty --org=ORG_NAME --no-interaction
+       terminus site:create SITENAME LABEL empty --org=ORG_NAME --no-interaction
 
 5. Goto the new Pantheon site page once the Terminus command reports `[notice] Deployed CMS`.
 
-3. Git add the Pantheon remote repo URL to the GitHub repo you cloned. Replace `PANTHEON_GIT_REPO` with Pantheon repo connection info from the Pantheon site page.
+6. Git add the Pantheon remote repo URL to the GitHub repo you cloned. Replace `PANTHEON_GIT_REPO` with Pantheon repo connection info from the Pantheon site page.
 
-    git remote add pantheon PANTHEON_GIT_REPO
+       git remote add pantheon PANTHEON_GIT_REPO
 
-4. Git pull the Pantheon remote with `--allow-unrelated-histories` and fix any merge conflicts.
+7. Git pull the Pantheon remote with `--allow-unrelated-histories` and fix any merge conflicts.
 
-    git pull pantheon master --allow-unrelated-histories
+       git pull pantheon master --allow-unrelated-histories
 
-4. Git force push to the Github remote master branch.
+8. Git force push to the Github remote master branch.
 
-    git push --force
+       git push --force
 
-5. Git force push to the `pantheon master` remote branch.
+9. Git force push to the `pantheon master` remote branch.
 
-    git push --force pantheon master
+       git push --force pantheon master
 
-6. Setup pantheon Dev site.
+10. Set the Pantheon site Development Mode to FTP to install the Drupal 8 site or import an existing database through the Pantheon Database/Files tab.
+11. Click the Visit Development Site button to either install the Drupal 8 site or verify the DB import was successful.
