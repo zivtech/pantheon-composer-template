@@ -14,24 +14,31 @@ Below you can find the notable changes between our repository and the pantheon e
 
 ## How to Use
 
-1. Create a new GitHub repo using this repository as a template.
-2. Create a new empty pantheon site using terminus.
+1. Create a new GitHub repo for the project site using this repository as a template.
+2. Ensure you have a [Pantheon Machine Token](https://dashboard.pantheon.io/users/#account/tokens/).
+3. Login to Pantheon using Terminus and your machine token in your Terminal.
 
-    terminus site:create SITENAME LABEL empty --org=zivtech --no-interaction
+    terminus auth:login --machine-token YOUR_MACHINE_TOKEN
 
-3. Git add the Pantheon remote repo URL to the GitHub repo you cloned.
+4. Create a new empty Pantheon site using Terminus. Replace `ORG_NAME` with your Pantheon organization name. Example: `zivtech`
 
-    git remote add pantheon `PANTHEON_GIT_REPO`
+    terminus site:create SITENAME LABEL empty --org=ORG_NAME --no-interaction
 
-4. Git pull the Pantheon remote with --allow-unrelated-histories and fix any conflicts.
+5. Goto the new Pantheon site page once the Terminus command reports `[notice] Deployed CMS`.
+
+3. Git add the Pantheon remote repo URL to the GitHub repo you cloned. Replace `PANTHEON_GIT_REPO` with Pantheon repo connection info from the Pantheon site page.
+
+    git remote add pantheon PANTHEON_GIT_REPO
+
+4. Git pull the Pantheon remote with `--allow-unrelated-histories` and fix any merge conflicts.
 
     git pull pantheon master --allow-unrelated-histories
 
-4. Git force push to the github remote master branch.
+4. Git force push to the Github remote master branch.
 
     git push --force
 
-5. Git force push to the pantheon remote master branch.
+5. Git force push to the `pantheon master` remote branch.
 
     git push --force pantheon master
 
