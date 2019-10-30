@@ -1,9 +1,9 @@
 image: proboci/ubuntu-16.04-lamp:php-7.2
 steps:
   - name: Update composer.
-      command: '/usr/local/bin/composer self-update'
+    command: '/usr/local/bin/composer self-update'
   - name: Install composer packages with dependencies.
-      command: 'composer install -d /src/docroot/'
+    command: 'composer install -d /src/docroot/'
   - name: Drupal site install.
     plugin: Drupal
     clearCaches: false
@@ -16,11 +16,11 @@ steps:
       vendor/drush/drush/drush site-install -y --root=/var/www/html standard --db-url='mysqli://root:strongpassword@localhost/drupal'
       chown -R www-data:www-data /src/web/sites/default/files
   - name: Earlier cache rebuild
-      command: "drush --root='/var/www/html' cr"
+    command: "drush --root='/var/www/html' cr"
   - name: Import config
-      command: "drush --root='/var/www/html/' config-import --source='/src/config/sync' -y"
+    command: "drush --root='/var/www/html/' config-import --source='/src/config/sync' -y"
   - name: Rebuild Caches
-      command: "drush --root='/var/www/html' cr"
+    command: "drush --root='/var/www/html' cr"
   - name: Generate login link.
     plugin: Script
     script: |
