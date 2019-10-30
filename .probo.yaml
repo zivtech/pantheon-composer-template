@@ -3,7 +3,7 @@ steps:
   - name: Update composer.
     command: '/usr/local/bin/composer self-update'
   - name: Install composer packages with dependencies.
-    command: 'composer install -d /src/docroot/'
+    command: 'composer install -d /src/web/'
   - name: Drupal site install.
     plugin: Drupal
     clearCaches: false
