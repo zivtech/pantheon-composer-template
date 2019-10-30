@@ -10,6 +10,7 @@ steps:
     subDirectory: web
     drupalVersion: 8
     configSyncDirectory: config
+    runInstall: true
   - name: Fix files dir.
     command: chown -R www-data:www-data /src/web/sites/default/files
   - name: Rebuild Caches
