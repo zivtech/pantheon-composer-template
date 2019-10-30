@@ -11,9 +11,7 @@ steps:
     drupalVersion: 8
     configSyncDirectory: config
     runInstall: true
-  - name: Fix files dir.
-    command: chown -R www-data:www-data /src/web/sites/default/files
   - name: Rebuild Caches
     command: "drush --root='/var/www/html' cr"
   - name: Generate login link.
-    command: drush uli
+    command: "drush --root='/var/www/html' uli"
