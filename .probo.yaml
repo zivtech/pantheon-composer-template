@@ -16,4 +16,4 @@ steps:
   - name: Rebuild Caches
     command: "drush --root='/var/www/html' cr"
   - name: Generate login link.
-    command: vendor/drush/drush/drush uli
+    command: drush uli
