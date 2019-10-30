@@ -10,7 +10,8 @@ Below you can find the notable changes between our repository and the pantheon e
 - Removed Circle.CI, GitLab, and Bitbucket functionality, as we typically use GitHub with Jenkins.
 - Removed drupal console. We use drush.
 - Added some commonly used contrib modules.
-- Added Environment Indicator settings for local, DDEV, and Pantheon environments.
+- Added [Environment Indicator](https://www.drupal.org/project/environment_indicator) module settings for local, DDEV, and Pantheon environments.
+- Added [composer-manifest](https://github.com/joachim-n/composer-manifest) Composer plugin to track all installed package and dependency versions.
 
 ## How to Use
 
