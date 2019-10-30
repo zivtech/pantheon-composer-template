@@ -18,7 +18,7 @@ steps:
   - name: Earlier cache rebuild
     command: "drush --root='/var/www/html' cr"
   - name: Import config
-    command: "drush --root='/var/www/html/' config-import --source='/src/config/sync' -y"
+    command: "drush --root='/var/www/html/' config-import --source='/src/config' -y"
   - name: Rebuild Caches
     command: "drush --root='/var/www/html' cr"
   - name: Generate login link.
