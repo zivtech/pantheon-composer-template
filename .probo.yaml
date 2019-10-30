@@ -10,14 +10,9 @@ steps:
     subDirectory: web
     drupalVersion: 8
     configSyncDirectory: config
-  - name: Install Drupal site.
-    plugin: Script
-    script: |
-      vendor/drush/drush/drush site-install -y --root=/var/www/html standard --db-url='mysqli://root:strongpassword@localhost/drupal'
-      chown -R www-data:www-data /src/web/sites/default/files
+  - name: Fix files dir.
+    command: chown -R www-data:www-data /src/web/sites/default/files
   - name: Rebuild Caches
     command: "drush --root='/var/www/html' cr"
   - name: Generate login link.
-    plugin: Script
-    script: |
-      vendor/drush/drush/drush uli
+    command: vendor/drush/drush/drush uli
