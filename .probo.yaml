@@ -9,16 +9,12 @@ steps:
     clearCaches: false
     subDirectory: web
     drupalVersion: 8
-    configSyncDirectory: config/sync
+    configSyncDirectory: config
   - name: Install Drupal site.
     plugin: Script
     script: |
       vendor/drush/drush/drush site-install -y --root=/var/www/html standard --db-url='mysqli://root:strongpassword@localhost/drupal'
       chown -R www-data:www-data /src/web/sites/default/files
-  - name: Earlier cache rebuild
-    command: "drush --root='/var/www/html' cr"
-  - name: Import config
-    command: "drush --root='/var/www/html/' config-import --source='/src/config' -y"
   - name: Rebuild Caches
     command: "drush --root='/var/www/html' cr"
   - name: Generate login link.
