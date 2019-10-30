@@ -33,6 +33,7 @@
         "drupal/token": "^1.5",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8",
+        "joachim-n/composer-manifest": "^1.0",
         "pantheon-systems/quicksilver-pushback": "~1",
         "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "^8.6.15",

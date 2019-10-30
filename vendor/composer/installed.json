@@ -4607,6 +4607,48 @@
         ]
     },
     {
+        "name": "joachim-n/composer-manifest",
+        "version": "1.0.4",
+        "version_normalized": "1.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/joachim-n/composer-manifest.git",
+            "reference": "f9e6fdaeb0989c24ab325a196a3b3862af1e6709"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/joachim-n/composer-manifest/zipball/f9e6fdaeb0989c24ab325a196a3b3862af1e6709",
+            "reference": "f9e6fdaeb0989c24ab325a196a3b3862af1e6709",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0",
+            "symfony/yaml": "^3.4 || ^4.2"
+        },
+        "require-dev": {
+            "composer/composer": "~1.0",
+            "symfony/var-dumper": "^4.2"
+        },
+        "time": "2019-07-29T14:53:08+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "ComposerManifest\\Plugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ComposerManifest\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Joachim Noreiko",
+                "email": "joachim@107701.no-reply.drupal.org"
+            }
+        ]
+    },
+    {
         "name": "kub-at/php-simple-html-dom-parser",
         "version": "1.9",
         "version_normalized": "1.9.0.0",

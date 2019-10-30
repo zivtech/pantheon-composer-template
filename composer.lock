@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58c77098f445feb12ea9e7c497ec83d9",
+    "content-hash": "7dac910570577ce1f19067a9272aacbc",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3517,6 +3517,46 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "joachim-n/composer-manifest",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joachim-n/composer-manifest.git",
+                "reference": "f9e6fdaeb0989c24ab325a196a3b3862af1e6709"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joachim-n/composer-manifest/zipball/f9e6fdaeb0989c24ab325a196a3b3862af1e6709",
+                "reference": "f9e6fdaeb0989c24ab325a196a3b3862af1e6709",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "symfony/yaml": "^3.4 || ^4.2"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0",
+                "symfony/var-dumper": "^4.2"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "ComposerManifest\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ComposerManifest\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Joachim Noreiko",
+                    "email": "joachim@107701.no-reply.drupal.org"
+                }
+            ],
+            "time": "2019-07-29T14:53:08+00:00"
         },
         {
             "name": "kub-at/php-simple-html-dom-parser",

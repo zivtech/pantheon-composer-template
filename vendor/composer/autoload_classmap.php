@@ -689,6 +689,7 @@ return array(
     'Caxy\\HtmlDiff\\Table\\TablePosition' => $vendorDir . '/caxy/php-htmldiff/lib/Caxy/HtmlDiff/Table/TablePosition.php',
     'Caxy\\HtmlDiff\\Table\\TableRow' => $vendorDir . '/caxy/php-htmldiff/lib/Caxy/HtmlDiff/Table/TableRow.php',
     'Caxy\\HtmlDiff\\Util\\MbStringUtil' => $vendorDir . '/caxy/php-htmldiff/lib/Caxy/HtmlDiff/Util/MbStringUtil.php',
+    'ComposerManifest\\Plugin' => $vendorDir . '/joachim-n/composer-manifest/Plugin.php',
     'Composer\\Installers\\AglInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/AglInstaller.php',
     'Composer\\Installers\\AimeosInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/AimeosInstaller.php',
     'Composer\\Installers\\AnnotateCmsInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/AnnotateCmsInstaller.php',

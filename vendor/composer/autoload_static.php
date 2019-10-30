@@ -149,6 +149,7 @@ class ComposerStaticInitd537509cd94aedcbf33ecb57706ef9af
             'Consolidation\\AnnotatedCommand\\' => 31,
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
+            'ComposerManifest\\' => 17,
         ),
         'B' => 
         array (
@@ -465,6 +466,10 @@ class ComposerStaticInitd537509cd94aedcbf33ecb57706ef9af
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
+        'ComposerManifest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/joachim-n/composer-manifest',
         ),
         'Brumann\\Polyfill\\' => 
         array (
@@ -1345,6 +1350,7 @@ class ComposerStaticInitd537509cd94aedcbf33ecb57706ef9af
         'Caxy\\HtmlDiff\\Table\\TablePosition' => __DIR__ . '/..' . '/caxy/php-htmldiff/lib/Caxy/HtmlDiff/Table/TablePosition.php',
         'Caxy\\HtmlDiff\\Table\\TableRow' => __DIR__ . '/..' . '/caxy/php-htmldiff/lib/Caxy/HtmlDiff/Table/TableRow.php',
         'Caxy\\HtmlDiff\\Util\\MbStringUtil' => __DIR__ . '/..' . '/caxy/php-htmldiff/lib/Caxy/HtmlDiff/Util/MbStringUtil.php',
+        'ComposerManifest\\Plugin' => __DIR__ . '/..' . '/joachim-n/composer-manifest/Plugin.php',
         'Composer\\Installers\\AglInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AglInstaller.php',
         'Composer\\Installers\\AimeosInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AimeosInstaller.php',
         'Composer\\Installers\\AnnotateCmsInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AnnotateCmsInstaller.php',
