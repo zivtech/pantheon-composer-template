@@ -1,0 +1,14 @@
+name: pantheoncomposertemplate
+recipe: drupal8
+config:
+  webroot: web
+  php: 7.3
+  via: nginx
+services:
+  mailhog:
+    type: mailhog:v1.0.0
+    portforward: false
+    hogfrom:
+      - appserver
+    appserver:
+      type: php
