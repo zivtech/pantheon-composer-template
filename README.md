@@ -1,9 +1,14 @@
 # Pantheon Composer Template
-
 A repository template for new Drupal 8 Pantheon sites based on the https://github.com/pantheon-systems/example-drops-8-composer repository.
 
+## Starterlight Theme
+Our front-end developer team has put together a Drupal 8 starter theme called [Starterlight](https://github.com/zivtech/starterlight) to use for new Drupal 8 theming projects. See the [Starterlight](https://github.com/zivtech/starterlight) project page on GitHub for documentation.
+
+## Probo Integration
+This repository is ready to be integrated with Probo.CI to install a fresh copy of Drupal 8. Additional configuration to the .probo.yaml file is required to manage configuration imports after the site has been installed.
+
 ## Notable Changes
-Below you can find the notable changes between our repository and the pantheon example-drops-8-composer repo.
+Below you can find the notable changes between our repository and the Pantheon [example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) repo.
 
 - The .gitignore file is modified to allow scaffolding, vendor, core, and all other composer managed files.
 - The .gitignore file is modified to ignore composer dev dependencies.
@@ -13,7 +18,8 @@ Below you can find the notable changes between our repository and the pantheon e
 - Added [Environment Indicator](https://www.drupal.org/project/environment_indicator) module settings for local, DDEV, and Pantheon environments.
 - Added [composer-manifest](https://github.com/joachim-n/composer-manifest) Composer plugin to track all installed package and dependency versions.
 
-## How to Use
+## How to Use This Template
+Below you can find step by step documentation for creating a new Drupal 8 project repository controlled by Composer that lives on GitHub and is hosted on Pantheon.
 
 1. Create a new GitHub repo for the project site using this repository as a template.
 2. Ensure you have a [Pantheon Machine Token](https://dashboard.pantheon.io/users/#account/tokens/).

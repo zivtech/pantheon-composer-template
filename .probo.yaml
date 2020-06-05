@@ -1,0 +1,17 @@
+image: proboci/ubuntu-16.04-lamp:php-7.2
+steps:
+  - name: Update composer.
+    command: '/usr/local/bin/composer self-update'
+  - name: Install composer packages with dependencies.
+    command: 'composer install -d /src'
+  - name: Drupal site install.
+    plugin: Drupal
+    clearCaches: false
+    subDirectory: web
+    drupalVersion: 8
+    configSyncDirectory: config
+    runInstall: true
+  - name: Rebuild Caches
+    command: "drush --root='/var/www/html' cr"
+  - name: Generate login link.
+    command: "drush --root='/var/www/html' uli"

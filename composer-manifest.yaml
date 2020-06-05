@@ -55,7 +55,7 @@ packages:
     drupal/stage_file_proxy: 1.0.0-beta1
     drupal/token: 1.5.0
     drush-ops/behat-drush-endpoint: 9.3.0
-    drush/drush: 8.3.0
+    drush/drush: 8.3.1
     easyrdf/easyrdf: 0.9.1
     egulias/email-validator: 2.1.7
     ezyang/htmlpurifier: v4.11.0
