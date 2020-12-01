@@ -1,0 +1,38 @@
+name: acquia8
+recipe: drupal8
+config:
+  webroot: docroot
+proxy:
+  mailhog:
+    - mail.acquia8.lndo.site
+services:
+  appserver:
+    type: php:7.3
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: https://acquia8.lndo.site
+  node:
+    type: node
+    globals:
+      gulp-cli: latest
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+  solr:
+    type: solr:7
+    portforward: true
+    config:
+      dir: config/solr-conf/7.x
+env_file:
+  - acquia-utils/cloud/creds.env
+tooling:
+  drupal:
+    cmd:
+      - "/app/vendor/bin/drupal"
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
