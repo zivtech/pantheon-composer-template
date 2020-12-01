@@ -37,7 +37,7 @@ Acquia.
        git push --force pantheon master
 
 10. Copy the Jenkins [Deploy TEMPLATE from Github to Acquia Dev](https://jenkins.ops.zivtech.com/job/Deploy%20TEMPLATE%20from%20Github%20to%20Acquia%20Dev/)
-    job and name it "Deploy PROJECT from Github to Acquia Dev.
+    job and name it "Deploy PROJECT from Github to Acquia Dev".
 12. Configure ssh keys...
 13. Navigate to the GitHub repository settings page and under **Webhooks**
     click **Add webhook**. Use the following credentials:
