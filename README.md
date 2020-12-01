@@ -41,7 +41,9 @@ Acquia.
 12. Configure ssh keys...
 13. Navigate to the GitHub repository settings page and under **Webhooks**
     click **Add webhook**. Use the following credentials:
-
+  
+    | Setting                                              | Value                                             |
+    | ---------------------------------------------------- | ------------------------------------------------- |
     | Payload URL                                          | `https://jenkins.ops.zivtech.com/github-webhook/` |
     | Content type                                         | `application/json`                                |
     | Secret                                               |                                                   |
