@@ -39,7 +39,7 @@ Deployments are automatic to the Acquia Development environment via the Jenkins
 job [Deploy TEMPLATE from Github to Acquia Dev](https://jenkins.ops.zivtech.com/job/Deploy%20TEMPLATE%20from%20Github%20to%20Acquia%20Dev/)
 when code is merged/pushed to `master`.
 
-Additionally, we use [Acquia webhooks](https://docs.acquia.com/acquia-cloud/develop/api/cloud-hooks/) to run this [script](https://github.com/zivtech/zivtech/drip/blob/acquia8/hooks/common/post-code-update/drush-updb-cr-cim.sh) to clear cache, run updb, and import configuration when code is updated on any environment on Acquia.
+Additionally, we use [Acquia webhooks](https://docs.acquia.com/acquia-cloud/develop/api/cloud-hooks/) to run this [script](https://github.com/zivtech/drip/blob/acquia8/hooks/common/post-code-update/drush-updb-cr-cim.sh) to clear cache, run updb, and import configuration when code is updated on any environment on Acquia.
 
 ## Local development
 
