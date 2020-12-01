@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'a071fa47f08feace4b40046247f9a879848b973a',
+    'reference' => '93c3ad7809dde96f1a6a53ab04c31cffec786403',
     'name' => 'acquia/drupal-minimal-project',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'a071fa47f08feace4b40046247f9a879848b973a',
+      'reference' => '93c3ad7809dde96f1a6a53ab04c31cffec786403',
     ),
     'asm89/stack-cors' => 
     array (
@@ -116,6 +116,15 @@
       array (
         0 => '8.9.10',
       ),
+    ),
+    'drupal/admin_toolbar' => 
+    array (
+      'pretty_version' => '2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.4',
     ),
     'drupal/aggregator' => 
     array (
@@ -235,6 +244,24 @@
       array (
         0 => '8.9.10',
       ),
+    ),
+    'drupal/config_filter' => 
+    array (
+      'pretty_version' => '1.8.0',
+      'version' => '1.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.8',
+    ),
+    'drupal/config_split' => 
+    array (
+      'pretty_version' => '1.7.0',
+      'version' => '1.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.7',
     ),
     'drupal/config_translation' => 
     array (
@@ -507,6 +534,15 @@
       array (
         0 => '8.9.10',
       ),
+    ),
+    'drupal/environment_indicator' => 
+    array (
+      'pretty_version' => '4.0.2',
+      'version' => '4.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4.0.2',
     ),
     'drupal/field' => 
     array (
@@ -801,6 +837,15 @@
       array (
         0 => '8.9.10',
       ),
+    ),
+    'drupal/stage_file_proxy' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
     ),
     'drupal/standard' => 
     array (
