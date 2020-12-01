@@ -1,4 +1,4 @@
-Pantheon Composer Template
+Acquia Composer Template
 ====
 
 A repository template for new Drupal 8 Acquia sites based on
