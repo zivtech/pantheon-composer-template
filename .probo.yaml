@@ -1,17 +1,28 @@
-image: proboci/ubuntu-16.04-lamp:php-7.2
+image: proboci/ubuntu:18.04-php7.3
+assets:
+  - acquia-cloud.sh
 steps:
-  - name: Update composer.
-    command: '/usr/local/bin/composer self-update'
-  - name: Install composer packages with dependencies.
-    command: 'composer install -d /src'
-  - name: Drupal site install.
+  - name: Get the latest backup db from Acquia dev
+    command: 'source $ASSET_DIR/acquia-cloud.sh ; php $SRC_DIR/acquia-utils/cloud/pull-db-backup.php --output-file=$ASSET_DIR/export.sql.gz'
+  - name: Use custom drush
+    command: 'mv /usr/local/bin/drush /usr/local/bin/drush8; ln -s /src/vendor/drush/drush/drush /usr/local/bin/drush; chmod +x /src/vendor/drush/drush/drush'
+  - name: Probo site setup
     plugin: Drupal
-    clearCaches: false
-    subDirectory: web
     drupalVersion: 8
-    configSyncDirectory: config
-    runInstall: true
-  - name: Rebuild Caches
-    command: "drush --root='/var/www/html' cr"
-  - name: Generate login link.
-    command: "drush --root='/var/www/html' uli"
+    database: export.sql.gz
+    databaseGzipped: true
+    clearCaches: false
+    databaseUpdates: false
+    subDirectory: docroot
+  - name: Run updb
+    command: "drush --root=$SRC_DIR/docroot/ updb -y"
+  - name: Sanitize database
+    command: "drush --root=$SRC_DIR/docroot/ sqlsan -y"
+  - name: Import config
+    command: "drush --root=$SRC_DIR/docroot/ cim --source=$SRC_DIR/config/default -y"
+  - name: Fix file permissions
+    command: 'mkdir $SRC_DIR/docroot/sites/default/files/private && chown -R www-data:www-data $SRC_DIR/docroot/sites/default/files'
+  #- name: Enable stage file proxy
+  #  command: "drush --root=$SRC_DIR/docroot/ en stage_file_proxy -y && drush --root=$SRC_DIR/docroot/ cset stage_file_proxy.settings origin http://[DOMAIN].devcloud.acquia-sites.com/ -y"
+  - name: Cache clear
+    command: "drush --root=$SRC_DIR/docroot/ cr"
