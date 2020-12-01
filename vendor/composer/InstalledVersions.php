@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '93c3ad7809dde96f1a6a53ab04c31cffec786403',
+    'reference' => 'fe711a4cfe6cb75e47c0e89e6131f512d895f992',
     'name' => 'acquia/drupal-minimal-project',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '93c3ad7809dde96f1a6a53ab04c31cffec786403',
+      'reference' => 'fe711a4cfe6cb75e47c0e89e6131f512d895f992',
     ),
     'asm89/stack-cors' => 
     array (
@@ -1023,6 +1023,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '239400de7a173fe9901b9ac7c06497751f00727a',
+    ),
+    'joachim-n/composer-manifest' => 
+    array (
+      'pretty_version' => '1.1.2',
+      'version' => '1.1.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '34d75eaef6792fbbdf8f2bd59ee030034725bc99',
     ),
     'laminas/laminas-diactoros' => 
     array (

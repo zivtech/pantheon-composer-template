@@ -23,7 +23,8 @@
     "drupal/core-composer-scaffold": "^8",
     "drupal/core-recommended": "^8",
     "drupal/environment_indicator": "^4.0",
-    "drupal/stage_file_proxy": "^1.1"
+    "drupal/stage_file_proxy": "^1.1",
+    "joachim-n/composer-manifest": "^1.1"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,

@@ -117,6 +117,7 @@ class ComposerStaticInit5569f6015778fde40123f94fb79e603d
         array (
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
+            'ComposerManifest\\' => 17,
         ),
         'A' => 
         array (
@@ -324,6 +325,10 @@ class ComposerStaticInit5569f6015778fde40123f94fb79e603d
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
+        'ComposerManifest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/joachim-n/composer-manifest',
         ),
         'Asm89\\Stack\\' => 
         array (
