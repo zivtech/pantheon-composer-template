@@ -9,6 +9,8 @@ A set of repository templates for new Drupal 8 sites with each repo being tailor
 - drip-platformsh8
 - [drip-managed8](https://github.com/zivtech/drip-managed8)
   - A project template for Drupal 8 sites on Managed Hosting with a docroot directory and modified .gitignore to allow all site files to be committed and tagged for release.
+- [drip-managed9](https://github.com/zivtech/drip-managed9)
+  - A project template for Drupal 9 sites on Managed Hosting with a docroot directory and modified .gitignore to allow all site files to be committed and tagged for release.
 
 ## Local Development
 Each service specific repo has a base [Lando](https://docs.lando.dev/) configuration customized to that hosting service.
